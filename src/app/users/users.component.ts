@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService} from '../data.service';
+// import { DataService} from '../data.service';
+import { UserService} from './users.service';
 import { Observable} from 'rxjs';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
 
@@ -34,7 +35,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 export class UsersComponent implements OnInit {
 
   users$: Object;
-  constructor(private data: DataService) {}
+  constructor(private data: UserService) {}
 
   ngOnInit() {
     this.data.getUsers().subscribe(

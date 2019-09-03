@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {DataService} from '../data.service';
+// import {DataService} from '../data.service';
 import {Observable} from 'rxjs';
+import {PostsService} from './posts.service';
 
 @Component({
   selector: 'app-posts',
@@ -11,7 +12,7 @@ export class PostsComponent implements OnInit {
 
   posts$: Object;
 
-  constructor(private data: DataService) {
+  constructor(private data: PostsService) {
   }
 
   ngOnInit() {
